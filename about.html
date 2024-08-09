@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>About Us</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="script.js"></script>
+
+</head>
+<body>
+	<div class="hero">
+		<nav>
+			<a href="https://kyliecosmetics.com/" target="_blank">
+				<img src="image/logo.png" class="logo">
+			</a>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="feature.html">Collection Highlights</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+			</ul>
+			<div> 
+				<a href="buy.html" class="btn">Buy Now</a>
+			</div>
+		</nav>
+		<div class="section">
+			<div class="container">
+				<div class="content-section">
+					<div class="title anim">
+						<h1>About Us</h1>
+					</div>
+					<div class="contentabout anim">
+						<h3>How Kylie Cosmetics started</h3>
+						<p>Kylie Jenner, the youngest member of the Kardashian-Jenner family, launched Kylie Cosmetics on November 30, 2015, with a collection of three liquid lipsticks called Kylie Lip Kits. The $29 shades sold out immediately, with the first 30,000 units selling out within minutes of going online. The brand's success was fueled by Jenner's large Instagram following and strategic influencer partnerships, and the products have since become one of the most lucrative in the beauty industry. </p>
+						<div class="button">
+							<a href="https://kyliecosmetics.com/pages/about-us" target="_blank">Read More</a>
+						</div>	
+					</div>
+				</div>
+				<div class="image-section anim">
+					<img class="mySlides" src="image/aboutss.jpg">
+					<img class="mySlides" src="image/abouts.png">
+					<img class="mySlides" src="image/abouts.jpg">
+					<img class="mySlides" src="image/about.jpg">
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<footer class="footer">
+                    <div class="footer-content">
+                      <p class="caption">
+                        Elevate your look
+                        <br>
+                        Available at KYLIE stores near you
+                        <br>
+                        Dikshya Rai
+                    </div>
+    </footer>
+<script type="text/javascript">
+	var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 4000); 
+}
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+</body>
+</html>
